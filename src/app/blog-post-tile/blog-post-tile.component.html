@@ -1,0 +1,12 @@
+<div class="card">
+  <div class="card-body">
+    
+    <h5 appHighlighter class="card-title">{{posts.title}}</h5>
+    <!--<p class="card-text">{{post.summary | truncate: ['30']}}</p> -->
+    <p [ngClass]="{'fav': posts.isFav}" class= "card-text" (click) = fullSummaryDisplay()>{{posts.summary}}</p>
+    <a href= "#" class="btn btn-primary ">Read</a>
+    <a href= "#" (click)= "toggleFav()" class="btn btn-primary">Favourite</a>
+
+  
+  </div>
+</div>
