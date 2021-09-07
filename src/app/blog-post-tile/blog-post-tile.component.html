@@ -1,12 +1,13 @@
-<div class="card">
   <div class="card-body">
-    
-    <h5 appHighlighter class="card-title">{{posts.title}}</h5>
-    <!--<p class="card-text">{{post.summary | truncate: ['30']}}</p> -->
-    <p [ngClass]="{'fav': posts.isFav}" class= "card-text" (click) = fullSummaryDisplay()>{{posts.summary}}</p>
-    <a href= "#" class="btn btn-primary ">Read</a>
-    <a href= "#" (click)= "toggleFav()" class="btn btn-primary">Favourite</a>
-
-  
+    <mat-card class="example-card {{colorTile}}">
+        <h2>{{posts.title}}</h2>
+      <img mat-card-image class="example-icon" src="{{posts.image}}" >
+      <mat-card-content>
+        <p [ngClass]="{'fav': posts.isFav}" class= "card-text" (click) = fullSummaryDisplay()>{{posts.summary}}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>Read</button>
+        <button (click)= "toggleFav()" mat-button>Favourite</button>
+      </mat-card-actions>
+    </mat-card>
   </div>
-</div>
