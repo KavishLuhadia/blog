@@ -9,6 +9,7 @@ import { TruncatePipe } from '../truncate.pipe';
 })
 export class BlogPostTileComponent implements OnInit {
   @Input() posts!: BlogPost;
+  @Input() colorTile!: string;
 
   fullSummary!: string;
   

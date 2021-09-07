@@ -7,3 +7,35 @@
 .fav{
     background-color:lightgray;
 }
+
+mat-card-header{
+    align: center;
+}
+.green {
+    background-color:lightseagreen;
+
+}
+.yellow {
+    background-color:#ecdb7d;
+
+}
+.red {
+    background-color:#F44F4E;
+
+}
+.example-card{
+    text-align: center;
+}
+.card-body{
+}
+
+.example-icon{
+    width:150px;
+    height:150px;
+    border-radius:1px;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}

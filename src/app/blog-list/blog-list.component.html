@@ -1,8 +1,20 @@
-<p>
-    <a href="#" (click)= "expandAll()">Expand All</a>
-</p>
-<p>
-    <a href="#" (click)= "favAll()">Favourite All</a>
-</p>    
-<app-blog-post-tile *ngFor= "let post of blogPosts[currentPage]" [posts]= "post" #tile></app-blog-post-tile>
-<app-paginator [numberOfPages]= "numberOfPages" (pageNumberClick)="updatePage($event)"></app-paginator>
+<div>
+    <p> <a href="#" (click)="expandAll()">Expand All</a> </p>
+    <p> <a href="#" (click)="favAll()">Favourite All</a> </p>
+</div>
+<div class="container">
+    <div class="row align-items-center">
+        <div class="col-lg-6" *ngFor="let post of blogPosts[currentPage] index as i" >
+            <app-blog-post-tile [posts]="post" [colorTile]="colors[i]" #tile></app-blog-post-tile>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- <mat-grid-list cols="2" >
+    <mat-grid-tile *ngFor="let post of blogPosts[currentPage]">
+        <app-blog-post-tile [posts]="post" #tile></app-blog-post-tile>
+    </mat-grid-tile>
+</mat-grid-list> -->
+<app-paginator [numberOfPages]="numberOfPages" (pageNumberClick)="updatePage($event)"></app-paginator>

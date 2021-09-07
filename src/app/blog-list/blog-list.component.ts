@@ -15,6 +15,7 @@ export class BlogListComponent implements OnInit {
   fullSummary!: string;
   numberOfPages!: number;
   currentPage!: number;
+  colors!: Array<string>;
   @ViewChildren('tile') blogPostTileComponents!:QueryList<BlogPostTileComponent>;
 
   constructor(private truncatePipe: TruncatePipe, private blogDataService: BlogDataService  ) { }
@@ -22,6 +23,7 @@ export class BlogListComponent implements OnInit {
   ngOnInit(): void {
     
     this.currentPage = 0;
+    this.colors = ["red","green","yellow"];
     this.blogPosts = this.blogDataService.getData();
             this.numberOfPages = this.blogPosts.length;
  
